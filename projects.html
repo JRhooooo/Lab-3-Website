@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects - My Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <style>
+        /* Simple styles for the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        .nav-icon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        .nav-icon img {
+            width: 35px;  /* Set the size of the icon */
+            height: auto;
+        }
+
+        /* Styling for the projects section */
+        .projects-section {
+            margin: 20px;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+        }
+
+        /* Carousel container */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Limit the width of the carousel */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* The carousel itself */
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .project-card {
+            width: 100%;  /* Make each card take up the full width of the container */
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 0 0 100%; /* Ensure that each card takes up 100% of the carousel */
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 400px;  /* Fixed height for each image */
+            object-fit: cover;  /* Crop image to fit the container */
+        }
+
+        .project-card .card-content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Carousel navigation buttons */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 30px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-media {
+            margin-top: 10px;
+        }
+
+        footer .social-link {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        footer .social-link:hover {
+            color: #007BFF;  /* Blue on hover */
+            text-decoration: underline;
+        }
+
+        footer .social-icon {
+            width: 24px;  /* Size of the Instagram logo */
+            height: 24px;  /* Adjust height to maintain aspect ratio */
+            margin-right: 8px;  /* Space between logo and text */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="nav-icon">
+            <img src="img1.jpg" alt="My Icon"> <!-- Replace with your image file -->
+        </div>
+    </nav>
+
+    <header>
+        <h1>My Projects</h1>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <h2>My Recent Projects</h2>
+
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <!-- Carousel Wrapper -->
+                <div class="carousel" id="carousel">
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <img src="gamedev.jpg" alt="Project 1"> <!-- Replace with image for project -->
+                        <div class="card-content">
+                            <h3>Game Development</h3>
+                            <p>Brief description of the first project goes here. Highlight your work, skills, or technologies used in the project.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <img src="hackerman.jpg" alt="Project 2"> <!-- Replace with image for project -->
+                        <div class="card-content">
+                            <h3>Hackerman</h3>
+                            <p>Brief description of the second project goes here. Mention what challenges you faced and how you solved them.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <img src="videoedit.jpg" alt="Project 3"> <!-- Replace with image for project -->
+                        <div class="card-content">
+                            <h3>Video and Photo Editing</h3>
+                            <p>Brief description of the third project goes here. This could include the technologies you used, the project's impact, etc.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card">
+                        <img src="pikachu.jpg" alt="Project 4"> <!-- Replace with image for project -->
+                        <div class="card-content">
+                            <h3>I Have No Other Talents</h3>
+                            <p>Brief description of the fourth project goes here. Showcase the importance of the project in your portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation Buttons -->
+                <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+        <div class="social-media">
+            <!-- Instagram Link with Logo -->
+            <a href="https://www.instagram.com/yourusername" target="_blank" class="social-link">
+                <img src="instagram-logo.png" alt="Instagram Logo" class="social-icon">  <!-- Instagram logo -->
+                Instagram
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById('carousel');
+        const totalCards = document.querySelectorAll('.project-card').length;
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+
+            // Loop back to the beginning or end if necessary
+            if (currentIndex >= totalCards) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalCards - 1;
+            }
+
+            // Move the carousel by the correct amount of pixels
+            const offset = -currentIndex * 100;  // 100% width of each card
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
